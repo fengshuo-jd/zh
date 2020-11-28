@@ -1,0 +1,195 @@
+.main {
+    /* height: 1000px; */
+    background-color: #f3f5fb;
+}
+
+.main_container {
+    padding-top: 10px;
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.el-card {
+    width: 900px;
+    float: left;
+    padding-bottom: 20px;
+}
+
+.c_title {
+    position: relative;
+}
+
+.c_title a {
+    display: inline-block;
+    font-size: 24px;
+    padding: 0px 10px 0px 30px;
+    letter-spacing: 1px;
+    color: #1e97de;
+}
+
+.act_img {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+}
+
+.view_num {
+    display: inline-block;
+    padding: 0px 20px 0px 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.apply {
+    display: inline-block;
+    text-align: right;
+    color: #e7691e;
+    font-size: 14px;
+}
+
+.detail_info {
+    margin-top: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.detail_info div {
+    line-height: 50px;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+.detail_info div span {
+    display: inline-block;
+}
+
+.detail_info div span.type {
+    width: 110px;
+    text-align: right;
+    margin-right: -20px;
+    font-weight: bold;
+}
+
+.detail_info div span:nth-child(2) {
+    width: 700px;
+    vertical-align: top;
+    margin-left: 25px;
+}
+
+.detail_info .info_title {
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2a2a2a;
+}
+
+.detail_info .info_title i {
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    background: #1e97de;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.apply_person {
+    position: relative;
+}
+
+.apply_title {
+    height: 40px;
+    border-bottom: 2px solid #ddd;
+    line-height: 40px;
+    position: relative;
+    padding-left: 40px;
+    font-size: 18px;
+    color: #1e97de;
+    box-shadow: 0px 2px 2px 0px #ddd;
+}
+
+.apply_title span.bg {
+    display: inline-block;
+    width: 4px;
+    height: 35px;
+    background: #1e97de;
+    position: absolute;
+    bottom: 2px;
+    left: 20px;
+}
+
+.apply_person .per_list {
+    margin: 20px 0 0 20px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.apply_person .per_list li {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #1e97de;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.message {
+    float: right;
+}
+
+
+/* 右边 */
+
+.send {
+    width: 250px;
+    margin-right: 20px;
+    border: 1px solid #eee;
+    background: #fff;
+    padding-bottom: 10px;
+}
+
+.send_title {
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    background: #F5F1F1;
+    font-size: 16px;
+    text-indent: 20px;
+    color: #1e97de;
+}
+
+.send .person_info .pic {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 15px auto;
+}
+
+.send .person_info .pic img {
+    border-radius: 50%;
+}
+
+.address,
+.com_certificate {
+    width: 210px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.address {
+    margin-top: 15px;
+}
+
+.icons {
+    text-align: center;
+}
+
+.icon1 {
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #ff9900;
+    background-color: #ff9900;
+}

@@ -1,0 +1,87 @@
+html,
+body,
+#app {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    min-width: 1366px
+}
+
+.home-container {
+    height: 100%;
+}
+
+.el-header {
+    background-color: #373d41;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.el-header div {
+    display: flex;
+    align-items: center;
+}
+
+.el-aside {
+    background-color: #333744;
+}
+
+.toggle-botton {
+    background-color: #4a5064;
+    font-size: 10px;
+    line-height: 24px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+}
+
+.el-menu {
+    border: none !important;
+}
+
+.el-main {
+    background-color: #eaedf1;
+}
+
+.iconfont {
+    margin-right: 10px;
+}
+
+.el-breadcrumb {
+    margin-bottom: 15px!important;
+    font-size: 12px!important;
+}
+
+.el-card {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.el-table {
+    margin-top: 15px!important;
+    font-size: 12px!important;
+}
+
+.el-cascader-panel {
+    height: 200px;
+}
+
+.el-steps {
+    margin: 13px 0;
+}
+
+.el-step__title {
+    font-size: 13px;
+}
+
+.el-checkout {
+    margin: 0 5px 0 0 !important;
+}
+
+.ql-editor {
+    min-height: 300px;
+}

@@ -1,0 +1,328 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    /* min-width: 1366px; */
+    background-color: #fff;
+    /* background: rgba(100, 100, 100, 0.8); */
+    /* background-color: #f8ebda; */
+}
+
+#app {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    /* min-width: 1366px; */
+    background-color: white;
+    /* background: rgba(100, 100, 100, 0.8); */
+}
+
+input {
+    margin: 0;
+    padding: 10px !important;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.clearfix {
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* 内容 */
+
+.container {
+    height: 100%;
+}
+
+.top_container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.name {
+    height: 50px;
+    float: left;
+}
+
+.name span {
+    font-size: 12px;
+    color: #333;
+    background: url("../images/bg.png") no-repeat 0;
+    padding-left: 13px;
+    line-height: 40px;
+}
+
+.login {
+    font-size: 13px;
+    color: #333;
+    float: right;
+    line-height: 40px;
+}
+
+
+/* 菜单 */
+
+.top_meau {
+    margin-top: 5px;
+}
+
+.fr span {
+    margin-right: 10px;
+}
+
+.message a {
+    text-decoration: none;
+    color: #3697fc;
+    cursor: pointer;
+}
+
+
+/* .message::before {
+    content: "|";
+    margin-right: 10px;
+}
+
+.message::after {
+    content: "|";
+    padding-left: 6px;
+} */
+
+.icon {
+    font-size: 15px;
+}
+
+.table {
+    margin: 0;
+    width: 95px;
+    height: 60px;
+}
+
+#icon-champion {
+    font-size: 13px;
+}
+
+
+/* 搜索 */
+
+.top_search {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.top_logo {
+    width: 120px;
+    height: 80px;
+    margin-top: 7px;
+    float: left;
+}
+
+.top_logo img {
+    width: 160px;
+    height: 50px;
+}
+
+.search_box {
+    width: 757px;
+    height: 56px;
+    margin-left: 90px;
+    float: left;
+}
+
+.el-input__inner {
+    height: 56px!important;
+}
+
+.el-icon-search {
+    color: #fff;
+    font-size: 20px;
+}
+
+.search_button {
+    border-radius: 0 2px 2px 0!important;
+    width: 90px!important;
+    height: 56px!important;
+    background-color: #1787fb!important;
+}
+
+.activy {
+    float: right;
+    margin-top: 7px;
+    margin-right: 25px;
+}
+
+
+/* 导航栏 */
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav_contanier {
+    height: 48px;
+}
+
+.nav_contanier ul {
+    height: 48px;
+    color: #151515;
+}
+
+.nav_contanier li {
+    font-size: 16px;
+    list-style: none;
+    line-height: 50px;
+    height: 100%;
+    text-align: center;
+    width: 13.5%;
+}
+
+.nav_contanier li a {
+    color: rgba(0, 0, 0, 0.726);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav_contanier li a:hover {
+    color: #fba600
+}
+
+
+/* .nav_contanier a span::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: -6px;
+    width: 113px;
+    height: 4px;
+    background-color: #fdd000;
+    margin: 0 auto;
+} */
+
+.tran::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: -6px;
+    width: 113px;
+    height: 4px;
+    background-color: #fdd000;
+    margin: 0 auto;
+}
+
+
+/* footer */
+
+
+/*--footer start--*/
+
+.footer {
+    background-color: #f3f5fb;
+}
+
+.footer_content {
+    width: 100%;
+    min-width: 1200px;
+    background: #1e97de;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    padding-top: 15px;
+}
+
+.footer_content .f_nav {
+    padding: 10px 0px 5px 0px;
+}
+
+.footer_content .f_nav a {
+    color: #fff;
+    padding: 0 10px;
+}
+
+.footer_content p {
+    padding: 10px 0px 5px 0px;
+}
+
+.footer_content .certification {
+    padding: 10px 0px 5px 0px;
+}
+
+.footer_content .certification a {
+    padding: 0 10px;
+}
+
+
+/*--footer end--*/
+
+.to_top {
+    position: fixed;
+    right: 3px;
+    bottom: 10px;
+    z-index: 9999;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.s_to_top {
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+.s_to_top svg {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.s_to_top .icon {
+    font-size: 23px;
+}
+.el-dropdown-link {
+    cursor: pointer;
+    color: #409EFF;
+}
+
+.el-icon-arrow-down {
+    font-size: 10px;
+}
+.cell {
+    font-size: 15px !important;
+    padding-right: 0px !important;
+}

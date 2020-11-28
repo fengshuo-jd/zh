@@ -1,0 +1,245 @@
+/* html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+#app {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: white;
+} */
+
+input {
+	margin: 0;
+	padding: 10px !important;
+}
+
+a {
+	cursor: pointer;
+}
+
+.icon {
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+
+.el-dropdown-menu {
+	top: 24px !important;
+	left: 1215px !important;
+	width: 100px !important;
+}
+
+.clearfix {
+	overflow: hidden;
+}
+
+.longin_container {
+	height: 100%;
+	padding-top: 40px;
+}
+
+.login_box {
+	width: 1000px;
+	display: flex;
+	margin: auto;
+	/* padding-top: 40px; */
+	background-color: #fff;
+	box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.3);
+}
+
+.box_left {
+	width: 500px;
+	float: left;
+	padding: 54px 75px 48px;
+	box-sizing: border-box;
+	background: url("../img/bgc1.png") no-repeat;
+	background-color: #3a485a;
+}
+
+.box_left_header {
+	margin-top: 30px;
+}
+
+.box_left_header h2 {
+	margin: 10px 0 0;
+}
+
+.logo img {
+	width: 172px;
+}
+
+.box_left_header h2 {
+	font-size: 1.714rem;
+	color: #fff;
+	font-weight: normal;
+}
+
+.box_left_content {
+	margin-top: 40px;
+	margin-bottom: 50px;
+	color: #fff;
+	font-size: 15px;
+	line-height: 2;
+}
+
+.box_left_footer {
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.box_left_footer {
+	text-align: center;
+	padding-top: 40px;
+}
+
+.box_left_footer span {
+	font-weight: bold;
+	color: #fff;
+}
+
+.box_right {
+	background-color: #fff;
+	width: 500px;
+	float: left;
+	padding: 90px 75px 48px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.box_right_container {
+	height: 100%;
+}
+
+.box_right_header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+
+.box_right_header h2 {
+	margin: 0;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.box_right_header a {
+	float: right;
+	margin-top: 16px;
+	font-size: 15px;
+}
+
+.box_right_header a:hover {
+	color: #1283ba;
+}
+
+.el-form-item {
+	padding: 0;
+}
+
+.field {
+	height: 16px;
+	margin-bottom: 16px;
+}
+
+.forget {
+	float: right;
+	font-size: 15px;
+}
+
+.forget:hover {
+	color: #1283ba;
+	cursor: pointer;
+}
+
+.btns {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.el-button {
+	font-size: 16px;
+	width: 100%;
+	background-color: #fe7300;
+}
+
+.login-oauth {
+	margin-top: 30px;
+}
+
+.title {
+	display: table;
+	/* padding-left: 20px; */
+	margin-left: 18px;
+}
+
+.title::before {
+	content: "";
+	background-image: url("../img/qt.png");
+	background-position: right 1em top 50%;
+	display: table-cell;
+	position: relative;
+	width: 35%;
+	top: 50%;
+	background-repeat: no-repeat;
+	box-sizing: inherit;
+}
+
+.title::after {
+	content: "";
+	background-image: url("../img/qt.png");
+	background-position: left 1em top 50%;
+	display: table-cell;
+	position: relative;
+	width: 35%;
+	top: 50%;
+	background-repeat: no-repeat;
+	box-sizing: inherit;
+}
+
+.text-muted {
+	color: #8c92a4;
+}
+
+.list {
+	overflow: hidden;
+	margin-top: 16px;
+}
+
+.item1 {
+	text-align: center;
+	font-size: 36px;
+	float: left;
+	padding-left: 100px;
+}
+
+.item2 {
+	text-align: center;
+	font-size: 36px;
+	float: right;
+	padding-right: 100px;
+}
+
+.login_footer {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.login_footer span {
+	margin-left: 10px;
+}
+
+.login_footer a {
+	text-decoration: none;
+	color: #8c92a4;
+	font-size: 17px;
+}
+
+.login_footer a:hover {
+	color: #1283ba;
+}

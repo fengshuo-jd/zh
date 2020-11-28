@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 配置SpringMVC -->
+    <!-- 1.开启SpringMVC注解模式 -->
+    <!-- 简化配置：
+        (1)自动注册DefaultAnootationHandlerMapping,AnotationMethodHandlerAdapter
+        (2)提供一些列：数据绑定，数字和日期的format @NumberFormat, @DateTimeFormat, xml,json默认读写支持
+    -->
+    <mvc:annotation-driven />
+
+    <!-- 2.静态资源默认servlet配置
+        (1)加入对静态资源的处理：js,gif,png
+        (2)允许使用"/"做整体映射
+     -->
+    <mvc:default-servlet-handler/>
+
+    <!-- 3.配置jsp 显示ViewResolver -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewNames" value="BACK*"/>
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/resources/pages/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <bean id="viewResolver1" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewNames" value="Client*"/>
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/resources/pages/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <bean id="viewResolver2" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/resources/pages/Client/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <bean id="viewResolver3" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/resources/pages/BACK/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!-- 设置静态资源不过滤 -->
+    <mvc:resources location="/resources/css/" mapping="/css/**" />
+    <mvc:resources location="/resources/images/" mapping="/img/**" />
+    <mvc:resources location="/resources/js/" mapping="/js/**" />
+    <mvc:resources location="/resources/kindeditor/" mapping="/kindeditor/**" />
+<!--    <mvc:resources location="resources/plugins/" mapping="/plugins/**" />-->
+
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+<!--        后台拦截-->
+        <mvc:interceptor>
+            <!-- 拦截所有mvc控制器 -->
+            <mvc:mapping path="/user/*"/>
+            <mvc:mapping path="/activity/*"/>
+
+
+            <!-- mvc:exclude-mapping是另外一种拦截，它可以在你后来的测试中对某个页面进行不拦截，这样就不用在
+                LoginInterceptor的preHandler方法里面获取不拦截的请求uri地址了(优选) -->
+<!--            <mvc:exclude-mapping path="/user/findall"/>-->
+<!--            <mvc:exclude-mapping path="/activity/findAll"/>-->
+            <mvc:exclude-mapping path="/user/login" />
+            <bean class="com.zh_volunteer.ssm.interceptor.LoginIntercepter"></bean>
+        </mvc:interceptor>
+
+        <mvc:interceptor>
+<!--            <mvc:mapping path="/client/*"/>-->
+            <mvc:mapping path="/client/findSuchByActivityType"/>
+            <mvc:mapping path="/client/randomFind"/>
+            <mvc:mapping path="/client/randomFind_2"/>
+            <mvc:mapping path="/client/findSuchByTie"/>
+            <mvc:mapping path="/client/activityDetail"/>
+            <mvc:mapping path="/client/pageInfoSelect_2"/>
+            <mvc:mapping path="/client/pageInfoSelect"/>
+            <mvc:mapping path="/client/stuCenter"/>
+            <mvc:mapping path="/client/signUpActivity"/>
+            <mvc:mapping path="/client/gotoHasSignUpActivityDetail"/>
+            <mvc:mapping path="/client/updateStuInfo"/>
+            <mvc:mapping path="/client/updateStuPsw"/>
+            <mvc:mapping path="/client/search"/>
+            <mvc:mapping path="/client/searchByChartBoxAndTie"/>
+            <mvc:mapping path="/client/queryGroupByChartBox"/>
+
+
+
+            <mvc:mapping path="/clientAdmin/*"/>
+
+            <mvc:exclude-mapping path="/client/login"/>
+            <mvc:exclude-mapping path="/client/toIndex"/>
+            <bean class="com.zh_volunteer.ssm.interceptor.ClientLoginIntercepter"/>
+        </mvc:interceptor>
+
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/clientAdmin/*"/>-->
+
+<!--            <mvc:exclude-mapping path="/clientAdmin/login"/>-->
+<!--&lt;!&ndash;            <mvc:exclude-mapping path="/clientAdmin/toIndex"/>&ndash;&gt;-->
+<!--            <bean class="com.zh_volunteer.ssm.interceptor.ClientLoginIntercepter"/>-->
+<!--        </mvc:interceptor>-->
+    </mvc:interceptors>
+
+    <!-- 4.扫描web相关的bean -->
+    <context:component-scan base-package="com.zh_volunteer.ssm.controller"/>
+
+    <!--
+       支持AOP的注解支持，AOP底层使用代理技术
+       JDK动态代理，要求必须有接口
+       cglib代理，生成子类对象，proxy-target-class="true" 默认使用cglib的方式
+   -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+</beans>
